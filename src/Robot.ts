@@ -1,7 +1,7 @@
 import { Scenery } from './Scenery';
 
 export class Robot {
-  private escenarios: Map<string, Scenery> = new Map<string, Scenery>();
+  private scenaries: Map<string, Scenery> = new Map<string, Scenery>();
   constructor(
     private name: string,
     private key: string = Math.random().toString()
@@ -15,26 +15,26 @@ export class Robot {
   public getUniqueName(): string {
     return this.name;
   }
-  public assigEscenario(escenario: Scenery) {
-    this.escenarios.set(escenario.getFullName(), escenario);
+  public assigScenary(scenary: Scenery) {
+    this.scenaries.set(scenary.getFullName(), scenary);
   }
-  public getEscenariosName(): string | null {
+  public getSceneriesName(): string | null {
     let names: string = '';
-    for (let [esceKey, esce] of this.escenarios) {
-      names += esce.getFullName() + ',';
+    for (let [key, scenary] of this.scenaries) {
+      names += scenary.getFullName() + ',';
     }
     return names == '' ? null : names;
   }
-  public removeEscenarios(): void {
-    this.escenarios = new Map<string, Scenery>();
+  public removeSceneries(): void {
+    this.scenaries = new Map<string, Scenery>();
   }
-  public removeEscenario(escenario: Scenery): void {
-    this.escenarios.delete(escenario.getFullName());
+  public removeScenary(scenary: Scenery): void {
+    this.scenaries.delete(scenary.getFullName());
   }
-  public getRobotsNameByMyEscenearios(): string {
+  public getRobotsNameByMySceneries(): string {
     let names: string = '';
-    for (let [esceKey, esce] of this.escenarios) {
-      names += `(${esce.getFullName()})=>[${esce.getRobotsName()}]`;
+    for (let [key, scenary] of this.scenaries) {
+      names += `(${scenary.getFullName()})=>[${scenary.getRobotsName()}]`;
     }
     return names == '' ? null : names;
   }

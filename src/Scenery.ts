@@ -4,7 +4,7 @@ export class Scenery {
   private robots: Map<String, Robot> = new Map<String, Robot>();
   constructor(private fullName: string) {}
   addRobot(robot: Robot) {
-    robot.assigEscenario(this);
+    robot.assigScenary(this);
     this.robots.set(robot.getKey(), robot);
   }
   getFullName(): string {
@@ -15,7 +15,7 @@ export class Scenery {
   }
   expulseAllRobots() {
     for (let [robotKey, robot] of this.robots) {
-      robot.removeEscenario(this);
+      robot.removeScenary(this);
     }
   }
   public getRobotsName(): string | null {
