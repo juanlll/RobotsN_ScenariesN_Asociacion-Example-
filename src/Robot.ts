@@ -18,7 +18,7 @@ export class Robot {
   public assigScenary(scenary: Scenery) {
     this.scenaries.set(scenary.getFullName(), scenary);
   }
-  public getSceneriesName(): string | null {
+  public getScenariesName(): string | null {
     let names: string = '';
     for (let [key, scenary] of this.scenaries) {
       names += scenary.getFullName() + ',';
@@ -31,7 +31,7 @@ export class Robot {
   public removeScenary(scenary: Scenery): void {
     this.scenaries.delete(scenary.getFullName());
   }
-  public getRobotsNameByMySceneries(): string {
+  public getRobotsNameByMyScenaries(): string {
     let names: string = '';
     for (let [key, scenary] of this.scenaries) {
       names += `(${scenary.getFullName()})=>[${scenary.getRobotsName()}]`;

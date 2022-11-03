@@ -24,6 +24,6 @@ console.log(
   `Soy el robot ${robotOne.getUniqueName()}:`,
   `\n Y tengo estos escenarios asignados: \n (${escenarioOne
     .getRobotByKey(robotOne.getKey())
-    .getremoveScenaryName()}) \n
-    Y Tambien quisiera decirles que estos son los robots que están en los escenarios en los que Estoy asignado:\n ${robotOne.getRobotsNameByMyEscenearios()}`
+    .getScenariesName()}) \n
+    Y Tambien quisiera decirles que estos son los robots que están en los escenarios en los que Estoy asignado:\n ${robotOne.getRobotsNameByMyScenaries()}`
 );
