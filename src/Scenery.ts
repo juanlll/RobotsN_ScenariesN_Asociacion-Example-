@@ -1,3 +1,5 @@
+import { Robot } from './Robot';
+
 export class Scenery {
   private robots: Map<String, Robot> = new Map<String, Robot>();
   constructor(private fullName: string) {}
