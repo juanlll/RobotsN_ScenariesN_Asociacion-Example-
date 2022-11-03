@@ -20,8 +20,8 @@ export class Scenery {
   }
   public getRobotsName(): string | null {
     let names: string = '';
-    for (let [esceKey, esce] of this.robots) {
-      names += esce.getUniqueName() + ',';
+    for (let [key, robot] of this.robots) {
+      names += robot.getUniqueName() + ',';
     }
     return names == '' ? null : names;
   }
