@@ -25,5 +25,5 @@ console.log(
   `\n Y tengo estos escenarios asignados: \n (${escenarioOne
     .getRobotByKey(robotOne.getKey())
     .getEscenariosName()}) \n
-    Y Tambien quisiera decirles que estos son los robots que están en los esenarios en los que Estoy asignado:\n ${robotOne.getRobotsNameByMyEscenearios()}`
+    Y Tambien quisiera decirles que estos son los robots que están en los escenarios en los que Estoy asignado:\n ${robotOne.getRobotsNameByMyEscenearios()}`
 );
