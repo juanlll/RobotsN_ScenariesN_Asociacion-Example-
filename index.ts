@@ -17,7 +17,7 @@ escenarioTwo.addRobot(robotOne);
 escenarioTwo.addRobot(robotThree);
 
 /** Robots expulsados del escenario "escenarioTwo" */
-escenarioTwo.expulseAllRobots();
+//escenarioTwo.expulseAllRobots();
 
 /** Imprimiendo en consola la información del robotOne */
 console.log(
