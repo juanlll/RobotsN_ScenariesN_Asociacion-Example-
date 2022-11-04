@@ -3,17 +3,17 @@ import { Robot } from './Robot';
 export class Scenery {
   private robots: Map<String, Robot> = new Map<String, Robot>();
   constructor(private fullName: string) {}
-  addRobot(robot: Robot) {
+  public addRobot(robot: Robot) {
     robot.assigScenary(this);
     this.robots.set(robot.getKey(), robot);
   }
-  getFullName(): string {
+  public getFullName(): string {
     return this.fullName;
   }
-  getRobotByKey(key: string): Robot {
+  public getRobotByKey(key: string): Robot {
     return this.robots.get(key);
   }
-  expulseAllRobots() {
+  public expulseAllRobots() {
     for (let [robotKey, robot] of this.robots) {
       robot.removeScenary(this);
     }
